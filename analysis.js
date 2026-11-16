@@ -1,7 +1,8 @@
 // ==========================================================================
-// 📖 《山中》深度文本赏析数据库 (analysis.js) - 4行逐句对齐古诗词黄金版
-// 键值 1–4 对应《山中》首句、次句、第三句、末句
+// 📖 《山中》深度文本赏析数据库 (analysis.js) - 第一句至第四句标准版
 // ==========================================================================
+
+const sectionUnit = "句"; // 👈 供 index.html 识别，将“第X段”自动切换为“第X句”
 
 const U_TAG = (text) => `<span class="proper-noun">${text}</span>`;
 
@@ -20,10 +21,10 @@ const lessonTeacherAnalysis = {
         U_TAG("荆溪") + "水落，水底洁白的石头显露出来；天气转寒，霜染的红叶变得稀疏凋零。山间的小路原本没有下雨，但那满山空濛青翠的浓浓雾气，却仿佛沾湿了行人的衣衫。" +
         "</span><br><br>" +
         "<strong>【创作背景与艺术特色（“诗佛”王维的诗中有画）】</strong><br>" +
-        "<span style='font-weight:500; display:inline-block; margin-top:4px;'>《山中》是盛唐山水田园诗派代表人物" + U_TAG("王维") + "（字摩诘，世称“王右丞”，有“诗佛”之称）隐居蓝田辋川山庄时创作的一首五言写景绝句。北宋" + U_TAG("苏轼") + "曾盛赞他：<strong>“味摩诘之诗，诗中有画；观摩诘之画，画中有诗。”</strong>在这首短短二十字的绝句中，诗人以<strong>溪底白石、枝头红叶、满山空翠</strong>三组意象，调配出白、红、翠三色交融的明净画卷，更以“山路元无雨，空翠湿人衣”化视觉为触觉，把初冬山林的清幽空灵与自己闲适恬淡的隐逸心境表现得淋漓尽致。</span>",
+        "<span style='font-weight:500; display:inline-block; margin-top:4px;'>《山中》是盛唐山水田园诗派代表人物" + U_TAG("王维") + "（字摩诘，世称“王右丞”，有“诗佛”之称）隐居蓝田辋川山庄时创作的一首五言写景绝句。北宋" + U_TAG("苏轼") + "曾盛赞他：<strong>“味摩诘之诗，诗中有画；观摩诘之画，画中有诗。”</strong>在这首短短二十字的绝句中，诗人以<strong>溪底白石、枝头红叶、满山空翠</strong>三组意象，调配出白、红、翠三色交融的明净画卷，更以第三句、第四句“山路元无雨，空翠湿人衣”化视觉为触觉，把初冬山林的清幽空灵与自己闲适恬淡的隐逸心境表现得淋漓尽致。</span>",
 
     paragraphs: {
-        1: "<strong>【首句（起句）赏析：溪落石出，勾勒初冬近景】</strong>" +
+        1: "<strong>【第一句赏析：溪落石出，勾勒初冬近景】</strong>" +
            "<div style='margin-top:8px; padding:12px 15px; background:var(--card-bg); border:1px solid var(--input-border); border-radius:8px; line-height:1.8;'>" +
                "<div style='color:var(--text-color); font-weight:800;'>" +
                    "<span style='display:inline-block; background:var(--primary-color); color:#fff; font-size:11px; padding:1px 6px; border-radius:4px; margin-right:8px;'>原</span>" +
@@ -39,7 +40,7 @@ const lessonTeacherAnalysis = {
                "</div>" +
            "</div>",
 
-        2: "<strong>【次句（承句）赏析：天寒叶稀，点染初冬远景】</strong>" +
+        2: "<strong>【第二句赏析：天寒叶稀，点染初冬远景】</strong>" +
            "<div style='margin-top:8px; padding:12px 15px; background:var(--card-bg); border:1px solid var(--input-border); border-radius:8px; line-height:1.8;'>" +
                "<div style='color:var(--text-color); font-weight:800;'>" +
                    "<span style='display:inline-block; background:var(--primary-color); color:#fff; font-size:11px; padding:1px 6px; border-radius:4px; margin-right:8px;'>原</span>" +
@@ -51,11 +52,11 @@ const lessonTeacherAnalysis = {
                "</div>" +
                "<div style='margin-top:8px; padding-top:6px; border-top:1px dashed var(--input-border);'>" +
                    ANCIENT_MODERN_TAG("稀", "稀少、零落（形容词）", "稀有、稀薄") +
-                   GRAMMAR_TAG("诗中有画（色彩对比）", "仰视高处枝头稀疏的“红叶”，与首句低处溪中“白石”高低相映、红白对照，画面明朗清澈") +
+                   GRAMMAR_TAG("诗中有画（色彩对比）", "仰视高处枝头稀疏的“红叶”，与第一句低处溪中“白石”高低相映、红白对照，画面明朗清澈") +
                "</div>" +
            "</div>",
 
-        3: "<strong>【第三句（转句）赏析：山路无雨，欲扬先抑】</strong>" +
+        3: "<strong>【第三句赏析：山路无雨，欲扬先抑】</strong>" +
            "<div style='margin-top:8px; padding:12px 15px; background:var(--card-bg); border:1px solid var(--input-border); border-radius:8px; line-height:1.8;'>" +
                "<div style='color:var(--text-color); font-weight:800;'>" +
                    "<span style='display:inline-block; background:var(--primary-color); color:#fff; font-size:11px; padding:1px 6px; border-radius:4px; margin-right:8px;'>原</span>" +
@@ -67,11 +68,11 @@ const lessonTeacherAnalysis = {
                "</div>" +
                "<div style='margin-top:8px; padding-top:6px; border-top:1px dashed var(--input-border);'>" +
                    ANCIENT_MODERN_TAG("元", "通“原”，本来、原本（副词）", "第一、元旦、货币单位") +
-                   GRAMMAR_TAG("章法转折（欲扬先抑）", "先平实交代“山路本来无雨”的客观事实，为末句“湿人衣”的奇妙错觉蓄足气势") +
+                   GRAMMAR_TAG("章法转折（欲扬先抑）", "先平实交代“山路本来无雨”的客观事实，为第四句“湿人衣”的奇妙错觉蓄足气势") +
                "</div>" +
            "</div>",
 
-        4: "<strong>【末句（合句）赏析：空翠湿衣，化视觉为触觉（全诗诗眼）】</strong>" +
+        4: "<strong>【第四句赏析：空翠湿衣，化视觉为触觉（全诗诗眼）】</strong>" +
            "<div style='margin-top:8px; padding:12px 15px; background:var(--card-bg); border:1px solid var(--input-border); border-radius:8px; line-height:1.8;'>" +
                "<div style='color:var(--text-color); font-weight:800;'>" +
                    "<span style='display:inline-block; background:var(--primary-color); color:#fff; font-size:11px; padding:1px 6px; border-radius:4px; margin-right:8px;'>原</span>" +
